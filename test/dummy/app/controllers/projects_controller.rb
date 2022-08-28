@@ -8,11 +8,18 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   def show
+    Railsochrome.log("opening #{params[:id]}")
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+  end
+
+  def ajax
+    Railsochrome.log("this message from BE for ajax call")
+
+    render js: "alert('it works')"
   end
 
   # GET /projects/1/edit

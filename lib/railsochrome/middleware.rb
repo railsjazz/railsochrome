@@ -10,11 +10,12 @@ module Railsochrome
 
     def call!(env)
       status, headers, response = @app.call(env)
-#      headers['Content-Length'] = new_response.bytesize.to_s
 
-      headers["railsochrome"] = "enabled"
-      rand(20).times do |e|
-        headers["railsochrome_msg_#{e}"] = "test " * rand(1..20)
+      if Railsochrome.enabled
+        headers["railsochrome"] = "Hi there :)"
+        Array.wrap(Railsochrome::Collector.messages).each_with_index do |e, i|
+          headers["railsochrome_msg_#{i}"] = e
+        end
       end
 
       [status, headers, response]

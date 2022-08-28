@@ -2,6 +2,8 @@
 
 <h1>Projects</h1>
 
+<%= button_to 'AJAX', '/ajax', remote: true, method: :get %>
+
 <div id="projects">
   <% @projects.each do |project| %>
     <%= render project %>

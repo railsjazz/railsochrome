@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "projects#index"
+
+  get '/ajax', to: 'projects#ajax'
 end

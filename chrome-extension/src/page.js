@@ -9,15 +9,13 @@ const logStyling = `
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    // console.log(sender.tab ?
-    //             "from a content script:" + sender.tab.url :
-    //             "from the extension");
-    // console.log(request)
     if (request.source === "railsochrome") {
       let messages = request.details.responseHeaders.filter(e => e["name"].includes("railsochrome_msg_")).map(e => e["value"])
-      console.log(`%c ${messages.join('\n')}`, logStyling);
-      console.log(messages.join('\n'));
-      sendResponse({status: "ok"});
+      if(messages.length > 0) {
+        console.log(`%c${messages.join('\n')}`, logStyling);
+        // console.log(messages.join('\n'));
+        sendResponse({status: "ok"});
+      }
     }
   }
 );
