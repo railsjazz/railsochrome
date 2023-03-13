@@ -11,11 +11,15 @@ What is funny it can print log messages from the models. Just call a class metho
 
 How it works see on the diagram below:
 
+<img width="1184" alt="image" src="https://user-images.githubusercontent.com/11101/224819017-f032aa4c-6e41-4e9c-9a7f-c76783936580.png">
+
 ## Usage
 
 1. Close the repo
 
 2. Install chrome extension from the source code.
+
+<img width="861" alt="image" src="https://user-images.githubusercontent.com/11101/224819113-aeaaa9e3-e3b4-4328-a97f-c86383f9ec4a.png">
 
 3. Add gem and use in your code:
 
@@ -36,6 +40,9 @@ How it works see on the diagram below:
     end
   end
 ```
+4. Result:
+
+<img width="749" alt="image" src="https://user-images.githubusercontent.com/11101/224819217-1125f72e-df96-47d7-b80f-89eaff9b3760.png">
 
 ## Installation
 
