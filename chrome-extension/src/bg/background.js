@@ -1,7 +1,3 @@
-// chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
-//   console.log('wake me up');
-// });
-
 chrome.webRequest.onCompleted.addListener(
   function(details) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -18,24 +14,6 @@ chrome.webRequest.onCompleted.addListener(
   {urls: ["<all_urls>"]},
   ["responseHeaders"]
 )
-
-// chrome.webRequest.onHeadersReceived.addListener(
-//   function(details) {
-//     console.log('-----');
-//     console.log(details);
-//     console.log('-----');
-//     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//       console.log("onHeadersReceived 1");
-//       if(details.responseHeaders.find(e => e["name"] === "railsochrome")) {
-//         console.log("onHeadersReceived 2");
-//         chrome.tabs.sendMessage(tabs[0].id, {source: "railsochrome", details: details}, function(response) {});
-//       }
-//     });
-//   },
-//   {urls: ["<all_urls>"]},
-//   ["responseHeaders"]
-// )
-
 
 // see
 // https://stackoverflow.com/questions/66618136/persistent-service-worker-in-chrome-extension

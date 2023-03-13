@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   def index
+    Railsochrome.log("Opening index action")
+    Railsochrome.log("user_id = #{rand(111)}")
+    Railsochrome.log("account_id = #{rand(111)}")
+
     @projects = Project.all
   end
 

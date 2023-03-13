@@ -1,6 +1,5 @@
 class Project < ApplicationRecord
-
-  after_create do
-    Railsochrome.log("created id=#{self.id}")
+  after_initialize do
+    Railsochrome.log("after_initialize project id=#{self.id}")
   end
 end
