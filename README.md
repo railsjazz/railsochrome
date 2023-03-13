@@ -5,7 +5,7 @@
 
 Project created just for fun and because of curiosity.
 
-The idea of this project is to print log messages from Rails app in Chrome console. It will work even if you have a simple JSON API call.
+The idea of this project is to print log messages from the Rails app in a Chrome console. It will work even if you have a simple JSON API call.
 
 What is funny it can print log messages from the models. Just call a class method `Railsochrome.log`.
 
