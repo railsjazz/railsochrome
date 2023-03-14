@@ -3,11 +3,11 @@
 [![RailsJazz](https://github.com/igorkasyanchuk/rails_time_travel/blob/main/docs/my_other.svg?raw=true)](https://www.railsjazz.com)
 [![Listed on OpenSource-Heroes.com](https://opensource-heroes.com/badge-v1.svg)](https://opensource-heroes.com/o/railsjazz)
 
-Project created just for fun and because of curiosity.
+Project was created just for fun and out of curiosity.
 
 The idea of this project is to print log messages from the Rails app in a Chrome console. It will work even if you have a simple JSON API call.
 
-What is funny it can print log messages from the models. Just call a class method `Railsochrome.log`.
+What is funny, is that it can log messages from the models. Just call a class method Railsochrome.log.
 
 How it works see on the diagram below:
 
@@ -15,7 +15,7 @@ How it works see on the diagram below:
 
 ## Usage
 
-1. Close the repo
+1. Clone the repo
 
 2. Install chrome extension from the source code.
 
